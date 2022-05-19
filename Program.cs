@@ -30,6 +30,7 @@ namespace dotnet_shuffle
             {
                 Console.WriteLine("arr item {0}", INT_ARR[i]);
             }
+
             int[] shuffled_arr = this.ShuffleArray(this.INT_ARR);
 
             for (int j = 0; j < shuffled_arr.Length; j++)
