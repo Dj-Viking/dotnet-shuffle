@@ -30,14 +30,12 @@ namespace dotnet_shuffle
             {
                 Console.WriteLine("arr item {0}", INT_ARR[i]);
             }
-            int[] shuffled_arr = ShuffleArray(this.INT_ARR);
+            int[] shuffled_arr = this.ShuffleArray(this.INT_ARR);
 
             for (int j = 0; j < shuffled_arr.Length; j++)
             {
                 Console.WriteLine("random shuffled: {0} ", shuffled_arr[j]);
             }
-
-            return;
         }
 
         public int[] ShuffleArray(int[] arr)
