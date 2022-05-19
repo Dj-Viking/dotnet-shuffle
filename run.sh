@@ -1,0 +1,1 @@
+dotnet run because i erased the args haha;
