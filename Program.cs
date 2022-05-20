@@ -16,9 +16,7 @@ namespace dotnet_shuffle
             {
                 Console.WriteLine("got some args");
                 for (int i = 0; i < args.Length; i++)
-                {
                     Console.WriteLine(args[i]);
-                }
 
             }
             else
@@ -27,16 +25,14 @@ namespace dotnet_shuffle
             }
 
             for (int i = 0; i < this.INT_ARR.Length; i++)
-            {
                 Console.WriteLine("arr item {0}", INT_ARR[i]);
-            }
+
 
             int[] shuffled_arr = this.ShuffleArray(this.INT_ARR);
 
             for (int j = 0; j < shuffled_arr.Length; j++)
-            {
                 Console.WriteLine("random shuffled: {0} ", shuffled_arr[j]);
-            }
+
         }
 
         public int[] ShuffleArray(int[] arr)
