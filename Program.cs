@@ -12,27 +12,37 @@ namespace dotnet_shuffle
 
         public void DoTheStuff(string[] args)
         {
+            this.Separator("printing args");
+            this.PrintArgs(args);
+            this.Separator("printing current array");
+            this.PrintArr(this.INT_ARR);
+            this.Separator("print shuffled array");
+            int[] shuffled_arr = this.ShuffleArray(this.INT_ARR);
+
+            this.PrintArr(shuffled_arr);
+        }
+
+        public void PrintArr(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+                Console.WriteLine("arr item {0}", INT_ARR[i]);
+        }
+
+        public void PrintArgs(string[] args)
+        {
             if (args.Length > 0)
             {
                 Console.WriteLine("got some args");
                 for (int i = 0; i < args.Length; i++)
                     Console.WriteLine(args[i]);
-
             }
             else
-            {
                 Console.WriteLine("got no args");
-            }
+        }
 
-            for (int i = 0; i < this.INT_ARR.Length; i++)
-                Console.WriteLine("arr item {0}", INT_ARR[i]);
-
-
-            int[] shuffled_arr = this.ShuffleArray(this.INT_ARR);
-
-            for (int j = 0; j < shuffled_arr.Length; j++)
-                Console.WriteLine("random shuffled: {0} ", shuffled_arr[j]);
-
+        public void Separator(string msg)
+        {
+            Console.WriteLine("----------- {0}", msg);
         }
 
         public int[] ShuffleArray(int[] arr)
