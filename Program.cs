@@ -17,6 +17,7 @@ namespace dotnet_shuffle
             this.Separator("printing current array");
             this.PrintArr(this.INT_ARR);
             this.Separator("print shuffled array");
+
             int[] shuffled_arr = this.ShuffleArray(this.INT_ARR);
 
             this.PrintArr(shuffled_arr);
